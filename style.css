@@ -117,3 +117,11 @@
             display: none;
 
         }
+
+
+.bgim {
+            margin-top: 120px;
+            background-image: url('Evercare\ main.jpeg');
+            background-size: cover;
+            padding: 275px 40px;
+        }
