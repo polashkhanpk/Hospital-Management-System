@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Reception Dashboard</title>
+</head>
+<body>
 
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Hospital LOGO.png" alt="logo" width="55px"> <br>evercare Hospital
+            </div>
+
+            <div class="user">
+                <div>
+                    👤
+                </div>
+                <div class="info">
+                    <h3>SHIHAB KHAN</h3>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li class="active"><a href="#">📉 Dashboard</a></li>
+                    <li><a href="#">👨🏻‍⚕️ Doctor</a></li>
+                    <li><a href="#">🛌 Patient</a></li>
+                    <li><a href="#">🗓️ Schedule</a></li>
+                    <li><a href="#">📋 Appointment</a></li>
+                    <li><a href="#">📢 Noticeboard</a></li>
+                    
+                </ul>
+            </nav>
+          </div>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="title">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="actions">
+                    <a href="#">➜] Logout</a>
+                </div>
+            </header>
+
+
+            <div class="registration-form">
+                <h2>Appointment Form</h2>
+                <form>
+                    <input type="text" placeholder="Patient ID">
+                    <input type="text" placeholder="Mobile Number">
+                    <input type="number" placeholder="Age (in years)">
+                    <div class="gender">
+                        <label><input type="radio" name="gender"> Male</label>
+                        <label><input type="radio" name="gender"> Female</label>
+                    </div>
+                    <input type="text" placeholder="Doctor">
+                    <input type="date">
+                    <textarea placeholder="Problem in Details"></textarea>
+                    <input type="text" placeholder="Doctor's Fee">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
