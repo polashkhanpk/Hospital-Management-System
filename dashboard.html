@@ -4,65 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Reception Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <div class="dashboard-container">
-        <div class="sidebar">
-            <div class="logo">
-                <img src="Hospital LOGO.png" alt="logo" width="55px"> <br>evercare Hospital
-            </div>
-
-            <div class="user">
-                <div>
-                    👤
-                </div>
-                <div class="info">
-                    <h3>SHIHAB KHAN</h3>
-                </div>
-            </div>
-
-            <nav class="nav">
+        <aside class="sidebar">
+            <nav class="main-nav">
                 <ul>
-                    <li class="active"><a href="#">📉 Dashboard</a></li>
-                    <li><a href="#">👨🏻‍⚕️ Doctor</a></li>
-                    <li><a href="#">🛌 Patient</a></li>
-                    <li><a href="#">🗓️ Schedule</a></li>
-                    <li><a href="#">📋 Appointment</a></li>
-                    <li><a href="#">📢 Noticeboard</a></li>
-                    
+                    <li class="active"><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="doctor/doctor.php"><i class="fas fa-user-md"></i> Doctor</a></li>
+                    <li><a href="doctor/doctor_list.php"><i class="fas fa-user-md"></i> Doctor list</a></li>
+                    <li><a href="patient/patient.php"><i class="fas fa-procedures"></i> Patient</a></li>
+                    <li><a href="patient/patient_list.php"><i class="fas fa-procedures"></i> Patient list</a></li>
+                    <li><a href="#"><i class="fas fa-notes-medical"></i> Appointment list</a></li>
                 </ul>
             </nav>
-          </div>
+        </aside>
 
         <main class="main-content">
             <header class="top-bar">
-                <div class="title">
+                <div class="page-title">
                     <h2>Dashboard</h2>
+                    <p>For Appointment</p>
                 </div>
-                <div class="actions">
-                    <a href="#">➜] Logout</a>
+                <div class="header-actions">
+                    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
             </header>
 
+      <div class="form-container">
 
-            <div class="registration-form">
-                <h2>Appointment Form</h2>
-                <form>
-                    <input type="text" placeholder="Patient ID">
-                    <input type="text" placeholder="Mobile Number">
-                    <input type="number" placeholder="Age (in years)">
-                    <div class="gender">
-                        <label><input type="radio" name="gender"> Male</label>
-                        <label><input type="radio" name="gender"> Female</label>
-                    </div>
-                    <input type="text" placeholder="Doctor">
-                    <input type="date">
-                    <textarea placeholder="Problem in Details"></textarea>
-                    <input type="text" placeholder="Doctor's Fee">
-                    <button type="submit">Register</button>
-                </form>
+        <header>
+            <a href="#" class="list-btn">Appointment List</a>
+        </header>
+
+        <form>
+
+            <div class="form-group">
+                <label for="patient-id">Patient ID <span style="color:red;">*</span></label>
+                <input type="text" id="patient-id" name="patient-id" placeholder="Patient ID">
             </div>
+
+            <div class="form-group">
+                <label for="full-name">Full Name <span style="color:red;">*</span></label>
+                <input type="text" id="full-name" name="full-name" placeholder="Full Name">
+            </div>
+
+            <div class="form-group">
+                <label for="doctor-name">Doctor Name <span style="color:red;">*</span></label>
+                <input type="text" id="doctor-name" name="doctor-name" placeholder="Doctor Name">
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile No <span style="color:red;">*</span></label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile No">
+            </div>
+
+            <div class="form-group">
+                <label for="ad">Appointment Date <span style="color:red;">*</span></label>
+                <input type="date" id="ad" name="ad" value="Select Your Appointment Date">
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address <span style="color:red;">*</span></label>
+                <textarea id="address" name="address" rows="4" placeholder="Address" required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="reset" class="btn reset-btn">⟳ Reset</button>
+                <button type="submit" class="btn save-btn">⭗ Save</button>
+            </div>
+
+        </form>
+    </div>
+
         </main>
     </div>
 </body>
