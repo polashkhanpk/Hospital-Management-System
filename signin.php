@@ -1,7 +1,6 @@
 <?php
-include("Database/connection.php");
+    include("Database/connection.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
@@ -10,12 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO user (first_name, last_name, email, role, password) VALUES ('$firstName', '$lastName', '$email', '$role', '$password')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Account Created Successfully'); window.location='login.php';</script>";
-    } else {
+    $run = mysqli_query($conn, $sql);
+
+    if(!$run){
         echo "<script>alert('Error: Failed to create account');</script>";
+    } else{
+        "<script>alert('Account Created Successfully'); window.location='login.php';</script>";
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
