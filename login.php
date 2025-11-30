@@ -1,3 +1,33 @@
+<?php
+session_start();
+include 'Database/connection.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        $user = mysqli_fetch_assoc($result);
+
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['first_name'] = $user['first_name'];
+        $_SESSION['last_name'] = $user['last_name'];
+        $_SESSION['role'] = $user['role'];
+        $_SESSION['email'] = $user['email'];
+
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        echo "<script>alert('Invalid email or password');</script>";
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
