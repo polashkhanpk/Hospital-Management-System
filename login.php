@@ -15,14 +15,14 @@
 
         <div class="login-form">
             <h2>Log In</h2>
-            <form id="loginForm">
+            <form id="loginForm" action="login.php" method="POST">
                 <input type="text" id="email" name="email" placeholder="Email">
                 <input type="password" id="password" name="password" placeholder="Password">
                 <button type="submit" class="button" name="login">Login</button>
             </form>
 
             
-            <a href="#" class="button">Create New Account</a>
+            <a href="Signin.php" class="button">Create New Account</a>
         </div>
     </div>
 
