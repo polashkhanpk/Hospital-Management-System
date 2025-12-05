@@ -69,8 +69,8 @@ $result = mysqli_query($conn, $query);
                 <td><?= $row['dob'] ?></td>
                 <td><?= $row['status'] ?></td>
                 <td>
-                    <a class="#">Edit</a> /
-                    <a class="#">Delete</a>
+                    <a class="edit-btn" href="edit_patient.php?id=<?= $row['id'] ?>">Edit</a> |
+                    <a class="edit-btn" href="delete.php?id=<?= $row['id'] ?>">Delete</a>
                 </td>
             </tr>
         <?php } ?>
