@@ -64,7 +64,7 @@ $result = mysqli_query($conn, $query);
                 <td><?= $row['address'] ?></td>
                 <td>
                     <ahref="#">Edit</a> |
-                    <ahref="#>">Cancel appointment</a>
+                    <ahref="cancel.php?id=<?= $row['id'] ?>>">Cancel appointment</a>
                 </td>
             </tr>
         <?php } ?>
