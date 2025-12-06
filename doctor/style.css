@@ -13,4 +13,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.dashboard-container {
+    display: flex;
+}
+
 
