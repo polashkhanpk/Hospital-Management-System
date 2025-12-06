@@ -51,7 +51,7 @@ $result = mysqli_query($conn, $query);
                 <td><?= $row['status'] ?></td>
                 <td><?= $row['reason'] ?></td>
                 <td>
-                    <a class="action-button" href="#?>">Edit</a>
+                    <a class="action-button" href="edit_payment.php?id=<?= $row['id'] ?>">Edit</a>
                 </td>
             </tr>
         <?php } ?>
