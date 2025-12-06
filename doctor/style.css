@@ -156,6 +156,31 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tel
     font-size: 14px;
 }
 
+.radio-options {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-options label {
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.status-group .radio-options {
+    align-items: center;
+}
+
+.reset-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.save-btn {
+    background-color: #0c73e9;
+    color: white;
+}
+
 
 
 
