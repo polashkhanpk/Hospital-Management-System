@@ -33,6 +33,32 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.user-profile {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar i {
+    font-size: 40px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info span {
+    font-size: 13px;
+    color: #bdc3c7;
+}
+
+
+
 
 
 
