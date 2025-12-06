@@ -81,6 +81,17 @@ a {
     background-color: #007bff; 
 }
 
+.submenu {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.submenu li a {
+    padding-left: 50px;
+    font-size: 0.9em;
+}
+
 
 
 
