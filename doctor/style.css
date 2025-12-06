@@ -92,6 +92,16 @@ a {
     font-size: 0.9em;
 }
 
+.menu-toggle .fa-caret-down {
+    float: right;
+    transition: transform 0.3s;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
 
 
 
