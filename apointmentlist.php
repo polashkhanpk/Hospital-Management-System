@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $query);
 <html>
 <head>
     <title>Appointments List</title>
-    <link rel="stylesheet" href="list_style.css">
+    <link rel="stylesheet" href="for_style/apointmentlist.css">
     <style>
         .exit{
            padding-left: 1600px;
@@ -30,8 +30,8 @@ $result = mysqli_query($conn, $query);
 <h2>All Appointments List</h2>
 
 <div class="two" style="display: flex;">
-    <div class="download-btns">
-        <a href="appointment_export_csv.php">Download CSV</a>
+    <div class="download-button">
+        <a href="appointment_export_csv.php" class="csv_button">Download CSV</a>
     </div>
     <div class="exit">
         <a href="dashboard.php" class="buttone">EXIT</a>
@@ -64,8 +64,8 @@ $result = mysqli_query($conn, $query);
                 <td><?= $row['appointment_date'] ?></td>
                 <td><?= $row['address'] ?></td>
                 <td>
-                    <ahref="#">Edit</a> |
-                    <ahref="cancel.php?id=<?= $row['id'] ?>>">Cancel appointment</a>
+                    <a class="action-button" href="edit_apointment.php?id=<?= $row['id'] ?>">Edit</a> |
+                    <a class="action-button" href="cancel.php?id=<?= $row['id'] ?>">Cancel appointment</a>
                 </td>
             </tr>
         <?php } ?>
