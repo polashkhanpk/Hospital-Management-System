@@ -10,4 +10,6 @@ $result = mysqli_query($conn, $query);
 
 if (!$result || mysqli_num_rows($result) != 1) {
     die("Doctor not found!");
+
+$doctor = mysqli_fetch_assoc($result);
 ?>
