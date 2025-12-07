@@ -9,6 +9,7 @@ $result = mysqli_query($conn, $query);
 <html>
 <head>
     <title>Patient List</title>
+    <link rel="stylesheet" href="list_style.css">
     <style>
         .exit{
            padding-left: 1600px;
