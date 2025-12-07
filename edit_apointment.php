@@ -14,6 +14,7 @@ $appointment = mysqli_fetch_assoc($result);
 <html>
 <head>
     <title>Edit Appointment</title>
+    <link rel="stylesheet" href="for_style/edit_apointment.css">
 </head>
 <body>
 
