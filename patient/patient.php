@@ -11,7 +11,8 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Patient</title>
+    <title>Hospital Reception Dashboard</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -43,6 +44,8 @@ if (!isset($_SESSION['user_id'])) {
                     <li class="active"><a href="#"><i class="fas fa-procedures"></i> Patient</a></li>
                     <li><a href="patient_list.php"><i class="fas fa-procedures"></i> Patient list</a></li>
                     <li><a href="../apointmentlist.php"><i class="fas fa-notes-medical"></i> Appointment list</a></li>
+                    <li><a href="../payment/payment.php"><i class="fas fa-money-bill"></i> Payment</a></li>
+                    <li><a href="../payment/payment_list.php"><i class="fas fa-list"></i> Payment list</a></li>
                 </ul>
                 </ul>
             </nav>
@@ -55,15 +58,11 @@ if (!isset($_SESSION['user_id'])) {
                     <p>Add Patient</p>
                 </div>
                 <div class="header-actions">
-                    <a href="../login.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    <a href="../index.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
             </header>
 
       <div class="form-container">
-        <?php 
-
-?>
-
         <header>
             <a href="patient_list.php" class="list-btn">Patient List</a>
         </header>
@@ -110,7 +109,7 @@ if (!isset($_SESSION['user_id'])) {
                     </select>
             </div>
 
-            <div class="for sex">
+            <div class="form-group inline-group">
                 <label>Sex <span style="color:red;">*</span></label>
                 <div class="radio-options">
                     <input type="radio" id="sex-male" name="sex" value="male" required>
@@ -134,7 +133,7 @@ if (!isset($_SESSION['user_id'])) {
                 <textarea id="address" name="address" rows="4" placeholder="Address" required></textarea>
             </div>
 
-            <div class="for status">
+            <div class="form-group inline-group status-group">
                 <label>Status</label>
                 <div class="radio-options">
                     <input type="radio" id="status-active" name="status" value="active" checked>
@@ -146,8 +145,8 @@ if (!isset($_SESSION['user_id'])) {
             </div>
 
             <div class="form-actions">
-                <button type="reset" class="button reset">⟳ Reset</button>
-                <button type="submit" class="button save">⭗ Save</button>
+                <button type="reset" class="btn reset-btn">⟳ Reset</button>
+                <button type="submit" class="btn save-btn">⭗ Save</button>
             </div>
 
         </form>
@@ -155,5 +154,6 @@ if (!isset($_SESSION['user_id'])) {
 
         </main>
     </div>
+
 </body>
 </html>
