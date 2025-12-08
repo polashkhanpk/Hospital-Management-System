@@ -9,6 +9,22 @@ $result = mysqli_query($conn, $query);
 <html>
 <head>
     <title>Payment List</title>
+    <link rel="stylesheet" href="../for_style/apointmentlist.css">
+    <style>
+        .exit{
+           padding-left: 1600px;
+           padding-bottom: 22px;
+        }
+
+        .buttone{
+            text-decoration: none;
+            background: #ff0000ff;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
