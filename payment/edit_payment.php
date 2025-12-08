@@ -1,7 +1,10 @@
 <?php
 session_start();
 include '../Database/connection.php';
+
 $id = $_GET['id'];
+
+
 $query   = "SELECT * FROM payments WHERE id = '$id'";
 $result  = mysqli_query($conn, $query);
 $payment = mysqli_fetch_assoc($result);
@@ -12,6 +15,7 @@ $payment = mysqli_fetch_assoc($result);
 <html>
 <head>
     <title>Edit Payment</title>
+    <link rel="stylesheet" href="../for_style/edit_apointment.css">
 </head>
 <body>
 
