@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,21 +39,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-
         <div class="logo-container">
-            <img src="Hospital Logo.png" alt="logo" class="logo">
+            <img src="Hospital Logo.png" alt="Your Logo" class="logo">
         </div>
 
         <div class="login-form">
             <h2>Log In</h2>
+            <br>
             <form id="loginForm" action="login.php" method="POST">
-                <input type="text" id="email" name="email" placeholder="Email">
-                <input type="password" id="password" name="password" placeholder="Password">
-                <button type="submit" class="button" name="login">Login</button>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="submit" class="create-account-btn" name="login">Login</button>
             </form>
 
+            <!--<div class="extra-options">
+                <a href="ForgotPass.html">Forgot Password?</a>
+            </div><br>
+
+            <hr>  -->
+
             
-            <a href="Signin.php" class="button">Create New Account</a>
+            <!--<a href="Signin.php" class="create-account-btn">Create New Account</a> -->
         </div>
     </div>
 
