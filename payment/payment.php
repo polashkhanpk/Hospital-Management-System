@@ -10,6 +10,7 @@ include '../Database/connection.php';
 $search_type = "";
 $search_text = "";
 $patient_result = null;
+$doctor_result = null;
 
 if (isset($_GET['search_text']) && $_GET['search_text'] != "") {
 
@@ -32,6 +33,7 @@ if (isset($_GET['search_text']) && $_GET['search_text'] != "") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Reception Dashboard</title>
+    <link rel="stylesheet" href="../patient/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -164,6 +166,7 @@ if ($search_text != "" && $search_type == "patient") {
                     <input type="text" id="full-name" name="full-name" placeholder="Full Name" required>
                 </div>
 
+                <!-- BILLING SECTION -->
                 <div class="form-group">
                     <label for="base_amount">Base Amount (৳) <span style="color:red;">*</span></label>
                     <input type="number" step="0.01" id="base_amount" name="base_amount" placeholder="Base amount" required>
@@ -184,6 +187,7 @@ if ($search_text != "" && $search_type == "patient") {
                     <input type="number" step="0.01" id="total_amount" name="total_amount" readonly>
                 </div>
 
+                <!-- PAYMENT REASON -->
                 <div class="form-group">
                     <label for="reason">Reason for Payment <span style="color:red;">*</span></label>
                     <select id="reason" name="reason" required>
@@ -234,6 +238,7 @@ if ($search_text != "" && $search_type == "patient") {
 
 
 <script>
+    // BILLING CALCULATION
     function calcTotal(){
         let base = parseFloat(document.getElementById('base_amount').value) || 0;
         let discount = parseFloat(document.getElementById('discount').value) || 0;
